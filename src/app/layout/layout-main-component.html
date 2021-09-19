@@ -66,18 +66,42 @@
     <!--3 small images under the carousels-->
     <div class="row">
         <div class="col">
-            <img src="./assets/gl-37875-app-curbside-vpe_der-149659.png" class="text-grey"><span
-                class="text-secondary fw-bold fs-3">Ready in one hour with Curbside Pickup</span>
+            <div class="row g-0 px-5 mx-5">
+                <div class="col-md-4">
+                    <img src="./assets/gl-37875-app-curbside-vpe_der-149659.png" class="img-fluid rounded-start" alt="">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p class="card-text fw-bold fs-3 text-secondary">Ready in one hour with Curbside Pickup</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="column">
-            <img src="./assets/gl-app-vpe-freeshippin_der1-206852.png" class="text-greay"><span
-                class="text-secondary fw-bold fs-3">Free next-day delivery on thousands of items.</span>
+            <div class="row g-1 px-5 mx-5">
+                <div class="col-md-2">
+                    <img src="./assets/gl-app-vpe-freeshippin_der1-206852.png" class="img-fluid rounded-start" alt="">
+                </div>
+                <div class="col-md-4">
+                    <div class="card-body">
+                        <p class="card-text fw-bold fs-3 text-secondary">Free next-day delivery on thousands of items.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="column">
-            <img src="./assets/gl-app-vpe-freeshippin_der1-206852.png" class="text-greay"><span
-                class="text-secondary fw-bold fs-3">Same-day delivery. Order by 3 p.m.,get it by 9 p.m.</span>
+            <div class="row g-0 px-5 mx-5">
+                <div class="col-md-2">
+                    <img src="./assets/gl-app-vpe-freeshippin_der1-206852.png" class="img-fluid rounded-start" alt="">
+                </div>
+                <div class="col-md-3">
+                    <div class="card-body">
+                        <p class="card-text fw-bold fs-3 text-secondary">Same-day delivery. Order by 3 p.m.,get it by 9 p.m.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--Line separating the carousels and small images-->
@@ -86,7 +110,7 @@
         <!--3 cards-->
         <div class="container-fluid">
             <div class="row">
-                <div class="col">
+                <div class="col-3">
                     <h1 class="featurette-heading">Teen Tech Centers.<span class="text-muted"></span></h1>
                     <h5>
                         <p>It’s our mission to improve tech equity among teens in disinvested communities.Through tech
@@ -96,16 +120,14 @@
                         <p>Learn More</p>
                     </a>
                 </div>
-                <div class="col-9">
+                <div class="col-5">
                     <div class="card" style="width: 58rem;">
                         <img class="card-img-left" img src="./assets/GL-59325-inspo-teen-tech-208039.jpg"
                             alt="Card image cap">
                     </div>
-                    <div class="container">
-                        <div class="col">
-                            <img src="./assets/Screenshot from 2021-09-12 15-03-37.png" width="500px">
-                        </div>
-                    </div>
+                </div>
+                <div class="col">
+                    <img src="./assets/Screenshot from 2021-09-12 15-03-37.png" width="500px">
                 </div>
             </div>
         </div>
@@ -123,3 +145,5 @@
                 </p>
             </div>
         </div>
+
+        <router-outlet>Loading route</router-outlet>
