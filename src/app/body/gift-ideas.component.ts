@@ -1,14 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from "@angular/core";
 
 @Component({
-  selector: 'bestbuy-gift-ideas',
-  templateUrl: './gift-ideas.component.html',
+    selector:"app-gift-ideas",
+    templateUrl:"gift-ideas.component.html"
 })
-export class GiftIdeasComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class GiftIdeasComponent{
 
 }
+

@@ -1,14 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from "@angular/core";
 
 @Component({
-  selector: 'bestbuy-health-and-wellness',
-  templateUrl: './health-and-wellness.component.html',
+    selector:"app-health-and-wellness",
+    templateUrl:"health-and-wellness.component.html"
 })
-export class HealthAndWellnessComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class HealthAndWellnessComponent{
 
 }
+

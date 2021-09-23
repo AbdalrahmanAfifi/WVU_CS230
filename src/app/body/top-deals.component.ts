@@ -1,14 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from "@angular/core";
 
 @Component({
-  selector: 'bestbuy-top-deals',
-  templateUrl: './top-deals.component.html',
+    selector:"app-top-deals",
+    templateUrl:"top-deals.component.html"
 })
-export class TopDealsComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class TopDealsComponent{
 
 }
+
