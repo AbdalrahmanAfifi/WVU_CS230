@@ -29,6 +29,15 @@
         </div>
     </div>
 
+    <div class="container-fluid">
+        <div class="d-flex flex-row">
+            <div *ngFor="let card of cards">
+                <app-card title={{card.title}} price={{card.price}} imagePath={{card.imagePath}}></app-card>
+            </div>
+        </div>
+    </div>
+
+
     <!--Second carousel-->
     <div class="column">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">

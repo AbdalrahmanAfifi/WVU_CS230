@@ -4,6 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { BackToSchoolComponent } from './body/back-to-school';
+import { CardComponent } from './body/card.component';
 import { CreditCardsComponent } from './body/credit-cards.component';
 import { DealOfTheDayComponent } from './body/deal-of-the-day.component';
 import { GiftCardsComponent } from './body/gift-cards.component';
@@ -34,7 +35,8 @@ import { LayoutMainComponent } from './layout/layout-main-component';
     CreditCardsComponent,
     GiftCardsComponent,
     GiftIdeasComponent,
-    HomeLayoutComponent
+    HomeLayoutComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
