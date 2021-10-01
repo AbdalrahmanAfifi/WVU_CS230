@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 import { BackToSchoolComponent } from './body/back-to-school';
 import { CardComponent } from './body/card.component';
@@ -15,7 +14,8 @@ import { BottomNavBarComponent } from './footer/bottom-nav-bar.component';
 import { TopNavBarComponent } from './header/top-nav-bar.component';
 import { HomeLayoutComponent } from './layout/home-layout.component';
 import { LayoutMainComponent } from './layout/layout-main-component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { UserInfoComponent } from './header/user-info.component';
 
 
 
@@ -36,11 +36,13 @@ import { LayoutMainComponent } from './layout/layout-main-component';
     GiftCardsComponent,
     GiftIdeasComponent,
     HomeLayoutComponent,
-    CardComponent
+    CardComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
