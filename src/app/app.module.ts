@@ -42,7 +42,7 @@ import { UserInfoComponent } from './header/user-info.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

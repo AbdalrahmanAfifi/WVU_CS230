@@ -29,12 +29,18 @@
         </div>
     </div>
 
+    <!--Cards-->
     <div class="container-fluid">
         <div class="d-flex flex-row h-100">
             <div *ngFor="let card of cards; index as i">
                 <app-card title={{card.title}} price={{card.price}} imagePath={{card.imagePath}}></app-card>
             </div>
         </div>
+    </div>
+
+    <!--Testing backend for cards instead of mock-card.ts-->
+    <div *ngFor="let card of cards">
+        
     </div>
 
     <!--Second carousel-->

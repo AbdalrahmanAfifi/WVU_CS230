@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Card } from "../body/card.module";
-import { mock_card } from "../body/mock-card";
+import { UserInfoService } from "../header/user-info.service";
+
 
 @Component({
     selector: "app-home-layout.component",
@@ -10,10 +11,16 @@ import { mock_card } from "../body/mock-card";
 export class HomeLayoutComponent {
     cards: Card[] = [];
 
-    constructor() {
-        for (var card of mock_card)
-            this.cards.push(new Card(card));
+    constructor(private UserInfoService: UserInfoService) {
+        console.log();
+    }
+
+    ngOnInit() {
+        this.UserInfoService.getUserInfo().subscribe((data: Card[]) => {
+            for (var item of data) {
+                this.cards.push(item);
+            }
+        });
     }
 
 }
-

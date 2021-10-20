@@ -1,6 +1,6 @@
-import { HttpClient } from "@angular/common/http";
 import { Component, Injectable, OnInit } from "@angular/core";
 import { UserInfo } from "./user-info.model";
+import { UserInfoService } from "./user-info.service";
 @Injectable()
 @Component({
     selector: "app-user-info",
@@ -9,24 +9,19 @@ import { UserInfo } from "./user-info.model";
 export class UserInfoComponent implements OnInit {
     myInfo: UserInfo | undefined;
 
-    constructor(private http: HttpClient) {
+    constructor(private UserInfoService: UserInfoService) {
 
     }
     ngOnInit(): void {
         console.log("Sending get request to server");
-        this.getUserInfo();
+        this.UserInfoService.getUserInfo();
         console.log("Showing user info");
         this.showUserInfo();
     }
-    getUserInfo() {
-        return this.http.get<UserInfo>("https://bestbuy-app-49774-default-rtdb.firebaseio.com/my-info.json");
-    }
 
     showUserInfo() {
-        this.getUserInfo().subscribe((data: UserInfo) => {
+        this.UserInfoService.getUserInfo().subscribe((data) => {
             console.log(data);
-            this.myInfo = data;
-
         })
     }
 }
