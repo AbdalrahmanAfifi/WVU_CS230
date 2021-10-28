@@ -16,6 +16,17 @@ import { HomeLayoutComponent } from './layout/home-layout.component';
 import { LayoutMainComponent } from './layout/layout-main-component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserInfoComponent } from './header/user-info.component';
+import { FormsModule } from '@angular/forms';
+import { AccountComponent } from './body/account.component';
+import { OrdersAndPurchasesComponent } from './body/orders-and-purchases.component';
+import { YourProductsComponent } from './body/your-products.component';
+import { PaymentMethodsComponent } from './body/payment-methods.component';
+import { ProtectionPlansAndSubscriptionsComponent } from './body/protection-plans-and-subscriptions.component';
+import { DigitalLibraryComponent } from './body/digital-library.component';
+import { TotalTechSupportComponent } from './body/total-tech-support.component';
+import { FreeHomeConsultationComponent } from './body/free-home-consultation.component';
+import { MembersOffersComponent } from './body/members-offers.component';
+import { AccountSettingsComponent } from './body/account-settings.component';
 
 
 
@@ -37,12 +48,23 @@ import { UserInfoComponent } from './header/user-info.component';
     GiftIdeasComponent,
     HomeLayoutComponent,
     CardComponent,
-    UserInfoComponent
+    UserInfoComponent,
+    AccountComponent,
+    OrdersAndPurchasesComponent,
+    YourProductsComponent,
+    PaymentMethodsComponent,
+    ProtectionPlansAndSubscriptionsComponent,
+    DigitalLibraryComponent,
+    TotalTechSupportComponent,
+    FreeHomeConsultationComponent,
+    MembersOffersComponent,
+    AccountSettingsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

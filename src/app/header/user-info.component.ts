@@ -1,7 +1,7 @@
 import { Component, Injectable, OnInit } from "@angular/core";
 import { UserInfo } from "./user-info.model";
 import { UserInfoService } from "./user-info.service";
-@Injectable()
+
 @Component({
     selector: "app-user-info",
     templateUrl: "user-info.component.html"
@@ -20,8 +20,9 @@ export class UserInfoComponent implements OnInit {
     }
 
     showUserInfo() {
-        this.UserInfoService.getUserInfo().subscribe((data) => {
+        this.UserInfoService.getUserInfo().subscribe((data: UserInfo) => {
             console.log(data);
+            this.myInfo = data;
         })
     }
 }

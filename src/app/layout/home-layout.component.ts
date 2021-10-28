@@ -16,10 +16,11 @@ export class HomeLayoutComponent {
     }
 
     ngOnInit() {
-        this.UserInfoService.getUserInfo().subscribe((data: Card[]) => {
+        this.UserInfoService.getCard().subscribe((data: Card[]) => {
             for (var item of data) {
                 this.cards.push(item);
             }
+            console.log(this.cards);
         });
     }
 
