@@ -27,6 +27,10 @@ import { TotalTechSupportComponent } from './body/total-tech-support.component';
 import { FreeHomeConsultationComponent } from './body/free-home-consultation.component';
 import { MembersOffersComponent } from './body/members-offers.component';
 import { AccountSettingsComponent } from './body/account-settings.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import {AngularFireModule} from '@angular/fire/compat';
 
 
 
@@ -64,7 +68,10 @@ import { AccountSettingsComponent } from './body/account-settings.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase,'bestbuy-app'),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideDatabase(() => getDatabase())
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Card } from "../body/card.module";
+import { Card } from "../body/card.model";
 import { UserInfoService } from "../header/user-info.service";
 
 
