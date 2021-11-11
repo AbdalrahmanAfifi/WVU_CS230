@@ -5,25 +5,34 @@
 <div class="container">
     <div class="row">
         <div class="col-6 mx-auto">
-            <form #postForm="ngForm" (ngSubmit)="onUpdateUserInfo(postForm.value)">
+            <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
                 <div class="input-group input-group-lg">
                     <span class="input-group-text bg-primary text-white">First and last name</span>
-                    <input type="text" class="form-control" ngModel name="FirstName">
-                    <input type="text" class="form-control" ngModel name="LastName">
+                    <input type="text" class="form-control" placeholder="FirstName" ngModel name="FirstName" required
+                        firstName>
+                    <input type="text" class="form-control" placeholder="LastName" ngModel name="LastName" required
+                        lastName>
                 </div>
 
                 <div class="input-group input-group-lg">
                     <span class="input-group-text bg-primary text-white">Email</span>
-                    <input type="text" class="form-control" ngModel name="Email">
+                    <input type="text" class="form-control" placeholder="Email" ngModel name="email" required email>
                 </div>
 
                 <div class="input-group input-group-lg">
                     <span class="input-group-text bg-primary text-white">Password</span>
-                    <input type="password" class="form-control" ngModel name="Password">
+                    <input type="password" class="form-control" placeholder="Password" ngModel name="password" required
+                        password minlength="8">
                 </div>
 
 
-                <button class="btn-lg btn-dark" type="submit">
+                <button class="btn btn-lg btn-dark" type="submit" [disabled]="!authForm.valid"
+                    (click)="buttonClicked='Login'">
+                    Login
+                </button>
+
+                <button class=" btn btn-lg btn-dark m-3" type="submit" [disabled]="!authForm.valid"
+                    (click)="buttonClicked='SignUp'">
                     Sign Up
                 </button>
             </form>

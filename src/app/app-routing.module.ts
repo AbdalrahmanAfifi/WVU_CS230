@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthComponent } from './auth/auth.component';
 import { AccountSettingsComponent } from './body/account-settings.component';
 import { AccountComponent } from './body/account.component';
 import { BackToSchoolComponent } from './body/back-to-school';
@@ -36,7 +37,8 @@ const routes: Routes = [
   { path: "Total-tech-support", component: TotalTechSupportComponent },
   { path: "Free-home-consultation", component: FreeHomeConsultationComponent },
   { path: "Members-offers", component: MembersOffersComponent },
-  {path:"Account-settings",component:AccountSettingsComponent},
+  { path: "Account-settings", component: AccountSettingsComponent },
+  { path: "auth", component: AuthComponent },
   { path: "Home", component: HomeLayoutComponent },
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
 
